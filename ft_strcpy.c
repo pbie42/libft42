@@ -6,13 +6,13 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 17:01:11 by pbie              #+#    #+#             */
-/*   Updated: 2015/11/24 16:34:02 by pbie             ###   ########.fr       */
+/*   Updated: 2015/11/30 15:55:23 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strcpy(char *restrict dst, const char *restrict src)
+char		*ft_strcpy(char *dst, const char *src)
 {
 	size_t	i;
 

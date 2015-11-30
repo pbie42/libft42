@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 16:40:17 by pbie              #+#    #+#             */
-/*   Updated: 2015/11/24 18:33:41 by pbie             ###   ########.fr       */
+/*   Updated: 2015/11/30 22:17:22 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		j++;
 	while ((src[k]) && ((j + k + 1) < size))
 	{
-		dst[j] = src[k];
-		j++;
+		dst[j + k] = src[k];
 		k++;
 	}
 	if (j != size)
-		dst[j] = '\0';
+		dst[j + k] = '\0';
 	return (j + ft_strlen(src));
 }

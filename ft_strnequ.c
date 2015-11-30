@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 16:10:23 by pbie              #+#    #+#             */
-/*   Updated: 2015/11/27 16:18:05 by pbie             ###   ########.fr       */
+/*   Updated: 2015/11/30 21:21:50 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,5 @@
 
 int			ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	size_t	i;
-
-	i = 0;
-	while ((s1[i] == s2[i]) && (i < n) && (s1[i] != '\0'))
-	{
-		if (s1[i] != s2[i])
-			return (0);
-		i++;
-	}
-	return (1);
+	return (ft_strncmp(s1, s2, n) ? 0 : 1);
 }

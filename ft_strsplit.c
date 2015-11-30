@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 16:21:25 by pbie              #+#    #+#             */
-/*   Updated: 2015/11/27 17:35:59 by pbie             ###   ########.fr       */
+/*   Updated: 2015/11/30 19:55:05 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char				**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	k = 0;
-	tab = (char *)malloc(sizeof(char *) * (ft_cntwrd(s, c)) + 1);
+	tab = (char **)malloc(sizeof(char *) * (ft_cntwrd(s, c)) + 1);
 	if (tab == NULL)
 		return (NULL);
 	while (s[i])
