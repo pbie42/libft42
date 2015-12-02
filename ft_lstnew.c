@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 20:01:57 by pbie              #+#    #+#             */
-/*   Updated: 2015/12/01 16:35:55 by pbie             ###   ########.fr       */
+/*   Created: 2015/12/01 16:41:20 by pbie              #+#    #+#             */
+/*   Updated: 2015/12/01 17:16:40 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_atoi(const char *str)
+t_list			*ft_lstnew(void const *content, size_t content_size)
 {
-	long			res;
-	long			sign;
-	unsigned int	i;
+	t_list		*new;
 
-	res = 0;
-	sign = 1;
-	i = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
-			str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	new = (t_list *)malloc(sizeof(t_list) * 1);
+	if (new == NULL)
+		return (NULL);
+	if (content == NULL)
 	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
+		new->content = NULL;
+		new->content_size = 0;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	else
 	{
-		res = res * 10 + str[i] - '0';
-		i++;
+		new->content = malloc(content_size);
+		if (new->content == NULL)
+			return (NULL);
+		ft_memmove(new->content, content, content_size);
+		new->content_size = content_size;
 	}
-	return ((int)(res * sign));
+	new->next = NULL;
+	return (new);
 }

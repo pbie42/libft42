@@ -1,39 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 20:01:57 by pbie              #+#    #+#             */
-/*   Updated: 2015/12/01 16:35:55 by pbie             ###   ########.fr       */
+/*   Created: 2015/12/01 18:21:05 by pbie              #+#    #+#             */
+/*   Updated: 2015/12/01 18:36:12 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_atoi(const char *str)
+void		ft_lstadd(t_list **alst, t_list *new)
 {
-	long			res;
-	long			sign;
-	unsigned int	i;
-
-	res = 0;
-	sign = 1;
-	i = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
-			str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if (new != NULL)
 	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
+		new->next = *alst;
+		*alst = new;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res = res * 10 + str[i] - '0';
-		i++;
-	}
-	return ((int)(res * sign));
 }
