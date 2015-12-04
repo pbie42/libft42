@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 17:41:51 by pbie              #+#    #+#             */
-/*   Updated: 2015/11/30 17:41:05 by pbie             ###   ########.fr       */
+/*   Updated: 2015/12/03 15:43:21 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	int		j;
 	char	*str;
 
+	if (!s1 || !s2)
+		return (NULL);
 	i = 0;
 	j = 0;
 	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
