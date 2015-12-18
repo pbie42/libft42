@@ -6,7 +6,7 @@
 #    By: pbie <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/30 18:33:46 by pbie              #+#    #+#              #
-#    Updated: 2015/12/03 14:41:03 by pbie             ###   ########.fr        #
+#    Updated: 2015/12/14 17:39:41 by pbie             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,11 @@ SRC = ft_atoi.c \
 	  ft_lstiter.c \
 	  ft_lstnew.c \
 	  ft_lstmap.c \
+	  ft_lstaddend.c \
+	  ft_islower.c \
+	  ft_isupper.c \
+	  ft_swap.c \
+	  ft_wordcount.c \
 
 
 OBJ = $(SRC:.c=.o)

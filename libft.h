@@ -6,7 +6,7 @@
 /*   By: pbie <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 18:25:33 by pbie              #+#    #+#             */
-/*   Updated: 2015/12/03 16:02:45 by pbie             ###   ########.fr       */
+/*   Updated: 2015/12/14 17:37:43 by pbie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,10 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void				ft_lstaddend(t_list **alst, t_list *new);
+int					ft_isupper(int c);
+int					ft_islower(int c);
+int					ft_wordcount(char const *s, char c);
+void				ft_swap(int *a, int *b);
 
 #endif
